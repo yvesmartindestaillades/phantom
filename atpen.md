@@ -3,205 +3,85 @@ layout: inner
 title: ATPen
 permalink: /atpen/
 ---
-## Markdown
+# ATPen, a Mechanical Pen for People with Essential Tremors
 
-Text can be **bold**, _italic_, ~~strikethrough~~ or `keyword`.
+*Debiopharm Challenge, Switzerland - May 2021 to Nov. 2021. This project was made in collaboration with Albéric de Lajarte and Dr. André Zacharia, MD, PhD.*
 
-BLAHLBAH THIS IS A TEST
+## 1% people can't write due to Essential Tremors
 
-[Link to another page](/index.html).
+1% of the population suffer from serious essential tremors (ET), a neuro-degenerative disease that causes involuntary shaking movement. ET makes it harder to brush your teeth, drink, write, and so on.
 
-There should be whitespace between paragraphs.
+To help people with ET writing, my friend Albéric de Lajarte and I designed an ET-filtering pen. Our idea was selected amongst 80+ projects for the DebioPharm Challenge [1], which financed $5,000 for a 4-months prototype development. We won the technological prize for an additional $5,000.
 
-# Header 1
+<img src="/img/posts/atpen/debiopharm_team.jpeg" style="width: 50%; max-width: 600px; margin: 0 auto; display: block;" alt="The 5 teams of challengers. Credit: Debiopharm" caption="The 5 teams of challengers. Credit: Debiopharm">
+<div class='caption' style="text-align: center;">
+Figure 1: The 5 teams of challengers. Credit: Debiopharm </div>
 
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
+## Our approach: remove the tremors from writing with a low-pass filter
 
-## Header 2
+We filtered out ET from the writing by integrating a low-pass filter to the pen, like a car shock absorber. This is possible because ET typically have a frequency around 8~12Hz, while slow writing is typically below 3Hz [2].
 
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
 
-### Header 3
-
-{% highlight js %}
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
-{% endhighlight %}
-
-{% highlight ruby %}
-# Ruby code with syntax highlighting
-GitHubPages::Dependencies.gems.each do |gem, version|
-  s.add_dependency(gem, "= #{version}")
-end
-{% endhighlight %}
-
-#### Header 4
-
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-
-##### Header 5
-
-1.  This is an ordered list following a header.
-2.  This is an ordered list following a header.
-3.  This is an ordered list following a header.
-
-###### Header 6
-
-| head1        | head two          | three |
-|:-------------|:------------------|:------|
-| ok           | good swedish fish | nice  |
-| out of stock | good and plenty   | nice  |
-| ok           | good `oreos`      | hmm   |
-| ok           | good `zoute` drop | yumm  |
-
-### There's a horizontal rule below this.
-
----
-
-### Here is an unordered list:
-
-*   Item foo
-*   Item bar
-*   Item baz
-*   Item zip
-
-### And an ordered list:
-
-1.  Item one
-1.  Item two
-1.  Item three
-1.  Item four
-
-### And a nested list:
-
-- level 1 item
-  - level 2 item
-  - level 2 item
-    - level 3 item
-    - level 3 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-
-### Wide image
-
-![Branching](https://guides.github.com/activities/hello-world/branching.png)
-
-### Definition lists can be used with HTML syntax.
-
-<dl>
-<dt>Name</dt>
-<dd>Godzilla</dd>
-<dt>Born</dt>
-<dd>1952</dd>
-<dt>Birthplace</dt>
-<dd>Japan</dd>
-<dt>Color</dt>
-<dd>Green</dd>
-</dl>
-
-{% highlight txt %}
-Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
-{% endhighlight %}
-
-{% highlight txt %}
-The final element.
-{% endhighlight %}
-
----
-
-## Syntax highlighting
-
-Jekyll has [built in support](https://jekyllrb.com/docs/templates/#code-snippet-highlighting) for syntax highlighting of over 60 languages thanks to [Rouge](http://rouge.jneen.net/).
-
-To render a code block with syntax highlighting, surround your code as follows:
-
-{% highlight markdown %}
-{% raw %}
-{% highlight ruby %}
-def foo
-  puts 'foo'
-end
-{% endhighlight %}
-{% endraw %}
-{% endhighlight %}
-
-[Pygments](http://pygments.org/) styles are present under section 6.0 of `css/style.scss` for customization.
-
-### Examples
-
----
-
-#### Bash
-
-{% highlight bash %}
->_ ssh -i ~/.ssh/id_rsa account@host.com
-account@host:~$
-$ var="my-value"
-$ echo $var
-my-value
-$ logout
-{% endhighlight %}
-
-#### HTML
-
-{% highlight html %}
-<!DOCTYPE html>
 <html>
- <head>
-   <meta charset="UTF-8">
-   <title>title</title>
- </head>
- <body>
-
- </body>
+<link rel="stylesheet" href="/css/images_md.css">
+<body>
+    <div class="image-container">
+        <div class="image">
+            <img src="/img/posts/atpen/frequency.jpg" alt="Frequency domain illustration">
+            <div class="caption">Figure 2: Green: writing, red: ET, blue: low pass filter. The frequency domains are distinct so we can filter ET out.</div>
+        </div>
+        <div class="image">
+            <img src="/img/posts/atpen/proto1.jpg" alt="Measurement of the writing frequency">
+            <div class="caption">Figure 3: Measurement of the writing frequency.</div>
+        </div>
+    </div>
+</body>
 </html>
-{% endhighlight %}
 
-#### CSS
+To make the product easy-to-use, inexpensive and robust, we decided to use a mechanical solution. The pen tip is decoupled from the pen body by a spring and damper [3]. The cutoff frequency of the filter was tuned by weighting the tip and tuning the spring stiffness.
 
-{% highlight css %}
-/*--------------------------------------------------------------
-	1.0 Defaults
---------------------------------------------------------------*/
+## Prototype 1: filtering on X/Y, blocking on Z
 
-@media (min-width: 1200px) {
-  .container {
-    width: 1200px;
-  }
-}
+At first, we thought that the users would need to have the pen stabilized on the Z axis, and the tremors filtered on the X and Y axis (see prototype 1). We built a large shell, easy to handle, and a spring and damper using TPU 3D printing.
 
-body {
-  background-color: #e9edf0;
-  @extend %opensans;
-  -webkit-font-smoothing: antialiased;
-}
-{% endhighlight %}
+<body>
+    <!-- align = "center" -->
+    <div class="image-container" style="width: 70%;">
+        <div class="image" style="width: 50%;">
+            <img src="/img/posts/atpen/proto1_schematics.png" alt="Prototype 1 schematics">
+            <div class="caption">Figure 4: Prototype 1, schematics.</div>
+        </div>
+        <div class="image" style="width: 50%;">
+            <img src="/img/posts/atpen/proto1_simulation.png" alt="Prototype 1 FEM simulation">
+            <div class="caption">Figure 5: Prototype 1, FEM simulation.</div>
+        </div>
+    </div>
+</body>
 
-#### YAML
+User testing revealed that users could keep the pen stable on the Z axis, and that the X/Y filtering was impractical. Also, the range of motion of the pen was too large, and the design wasn't well accepted.
 
-{% highlight yaml %}
-### Phantom settings
-paginate: 10
-footer_text: '© 2018 Jami Gibbs'
-admin_name: 'Yves Martin'
-google_analytics: "UA-9999999-99" # Update with your own tracking ID
+## Prototype 2
 
-#### Phantom Navigation menu
-enable_nav: true
-nav_item:
-  - { url: '/', text: 'Home' }
-  - { url: '/about', text: 'About' }
-{% endhighlight %}
+We decided to filter along the X axis only, and to reduce the range of motion of the pen. The greatest challenge was to integrate the spring and damper into a smaller pen with the right cutoff frequency. After many iterations, we used a steel blade as a spring along X and a constraint along Y, and magnetic damping based on Eddy's current.
+
+
+<div class="image" style="width: 80%;">
+    <img src="/img/posts/atpen/pen_final_proto.png" alt="The final ATPen prototype">
+    <div class="caption">Figure 6: The final ATPen prototype.</div>
+</div>
+
+## Our patients liked the prototype 2 better
+
+The final prototype was tested by 3 ET patients, and the results were very positive. The users could write with much better handwriting, and they were very happy with the pen.
+
+To ensure a neutral testing, we had our patients testing the pen every day for a week, at different times. We noticed that the pen was more effective when the patients were tired, which is when the tremors are the worst.
+
+<div class="image" style="width: 50%; align: center;">
+    <img src="/img/posts/atpen/test-patient.png" alt="Mrs. Wanner performing standard tests with the prototype 2">
+    <div class="caption">Figure 7: Mrs. Wanner performing standard tests (spirals, lines) with the prototype 2.</div>
+</div>
+
+## Final results
+Writing is easier with our Anti-Tremor Pen (ATPen)
+![](/img/posts/atpen/results.png)  
+*Figure 8: Writing is easier with our Anti-Tremor Pen (ATPen).* 

@@ -1,0 +1,175 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+    <h2>ATPen, a Mechanical Pen for People with Essential Tremors </h2>
+    <p><i>Debiopharm Challenge, Switzerland - May 2021 to Nov. 2021. This project was made in collaboration with
+            Albéric de Lajarte and Dr. André Zacharia, MD, PhD.</i></p>
+    <h3>1% people can't write due to Essential Tremors</h3>
+    <div class="row">
+        <div class="col-md-6">
+            <p>
+                1% of the population suffer from serious essential tremors (ET), a neuro-degenerative disease that
+                causes
+                involuntary shaking movement.
+                ET makes it harder to brush your teeth, drink, write, and so on.
+            </p>
+            <p>
+                To help people with ET writing, my friend Albéric de Lajarte and I designed an ET-filtering pen. Our
+                idea
+                was selected amongst 80+ projects for the DebioPharm Challenge [1], which financed $5,000 for a 4-months
+                prototype development. We won the technological prize for an additional $5,000.
+            </p>
+        </div>
+
+        <figure class="figure text-center" style="max-width:40%; float:right; margin-left: 2%;">
+            <img src="/img/posts/atpen/debiopharm_team.jpeg"
+                class="figure-img img-fluid mx-auto d-block rounded border border-secondary" alt="">
+            <figcaption class="figure-caption text-center">[1] The 5 teams of challengers. Credit: Debiopharm
+            </figcaption>
+        </figure>
+    </div>
+
+    <div class="row">
+        <div class="col-md">
+
+            <h3>Our approach: remove the tremors from writing with a low-pass filter </h3>
+                <p>
+                    We filtered out ET from the writing by integrating a low-pass filter to the pen, like a car
+                    shock absorber.
+                    This is possible because ET typically have a frequency around 8~12Hz, while slow writing is
+                    typically
+                    below 3Hz [2].
+                </p>
+                <div class="row">
+                    <figure class="figure text-center" style="max-width:40%; float:right; margin-left: 2%;">
+                        <img src="/img/posts/atpen/frequency.jpg"
+                            class="figure-img img-fluid mx-auto d-block rounded border border-secondary" alt="">
+                        <figcaption class="figure-caption text-center">[2] Green: writing, red: ET, blue: low pass
+                            filter.
+                            The
+                            frequency
+                            domains are distincts so we can filter ET out.</figcaption>
+                    </figure>
+
+                    <figure class="figure text-center" style="max-width:40%; float:right; margin-left: 2%;">
+                        <img src="/img/posts/atpen/proto1.jpg"
+                            class="figure-img img-fluid mx-auto d-block rounded border border-secondary" alt="">
+                        <figcaption class="figure-caption text-center">[3] Measurement of the writing frequency.
+                        </figcaption>
+                    </figure>
+                    <p>
+                        To make the product easy-to-use, inexpensive and robust, we decided to use a mechanical
+                        solution.
+                        The pen tip is decoupled from the pen body by a spring and damper [3]. The cutoff frequency of
+                        the
+                        filter was tuned by weighting the tip and tuning the spring stiffness.
+                    </p>
+                </div>
+        </div>
+        <div class="row">
+            <div class="col-md">
+                <h3>Prototype 1: filtering on X/Y, blocking on Z </h3>
+                <p>
+                    At first we thought that the users would need to have the pen stabilized on the Z axis, and the
+                    tremors
+                    filterd on the X and Y axis (see prototype 1).
+                    We built a large shell, easy to handle, and a spring and damper using TPU 3D printing.
+
+                </p>
+            </div>
+            <div class="row">
+
+                <figure class="figure text-center" style="max-width:45%; float:right; margin-left: 2%;">
+                    <img src="/img/posts/atpen/proto1_schematics.png"
+                        class="figure-img img-fluid mx-auto d-block rounded border border-secondary" alt="">
+                    <figcaption class="figure-caption text-center">[3] Prototype 1, schematics</figcaption>
+                </figure>
+
+                <figure class="figure text-center" style="max-width:45%; float:right; margin-left: 2%;">
+                    <img src="/img/posts/atpen/proto1_simulation.png"
+                        class="figure-img img-fluid mx-auto d-block rounded border border-secondary" alt="">
+                    <figcaption class="figure-caption text-center">[4] Prototype 1, FEM simulation</figcaption>
+                </figure>
+            </div>
+        </div>
+        <p>
+            User testing revealed that users could keep the pen stable on the Z axis, and that the X/Y filtering was
+            impractical. Also, the range of motion of the pen was too large, and the design wasn't well accepted.
+        </p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md">
+        <h3>Prototype 2</h3>
+
+        <p>
+            We decided to filter along the X axis only, and to reduce the range of motion of the pen.
+            The greatest challenge was to integrate the spring and damper into a smaller pen with the right cutoff
+            frequency.
+            After many iterations, we used a steel blade as a spring along X and a constraint along Y, and magnetic
+            damping based on Eddy's current.
+
+        </p>
+    </div>
+
+
+    <figure class="figure text-center" style="max-width:100%; float:right; margin-left: 2%;">
+        <img src="/img/posts/atpen/pen_final_proto.png"
+            class="figure-img img-fluid mx-auto d-block rounded border border-secondary" alt="">
+        <figcaption class="figure-caption text-center">[5] The final posts/atpen prototype</figcaption>
+    </figure>
+</div>
+
+<div class="row">
+    <div class="col-md">
+        <h3>Our patients liked the prototype 2 better</h3>
+
+        <div class="row">
+            <div class="col-md">
+                <div class="row">
+                    <p>
+                        The final prototype was tested by 3 ET patients, and the results were very positive.
+                        The users could write with a much better handwriting, and they were very happy with the pen.
+                    </p>
+                    <p>
+                        To ensure a neutral testing, we had our patients testing the pen everyday for a week, at
+                        different
+                        times.
+                        We noticed that the pen was more effective when the patients were tired, which is when the
+                        tremors are
+                        the
+                        worst.
+                    </p>
+                </div>
+
+                <div class="col-md-6">
+                    <figure class="figure text-center" style="max-width:100%; float:right; margin-left: 2%;">
+                        <img src="/img/posts/atpen/test-patient.png"
+                            class="figure-img img-fluid mx-auto d-block rounded border border-secondary" alt="">
+                        <figcaption class="figure-caption text-center">[6] Mrs. Wanner performing standard tests
+                            (spirals,
+                            lines)
+                            with the prototype 2</figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md">
+
+                    <h3>Final results</h3>
+
+                    <figure class="figure text-center" style="max-width:100%; float:right; margin-left: 2%;">
+                        <img src="/img/posts/atpen/results.png"
+                            class="figure-img img-fluid mx-auto d-block rounded border border-secondary" alt="">
+                        <figcaption class="figure-caption text-center">[7] Writing is easier with our Anti-Tremor Pen
+                            (posts/atpen)
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>

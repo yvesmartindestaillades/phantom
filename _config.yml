@@ -100,11 +100,12 @@ pagination:
 footer_text: '© 2018 Jami Gibbs'
 admin_name: 'Yves Martin'
 google_analytics: "UA-9999999-99" # Update with your own tracking ID
-enable_contact: false
+enable_contact: true
 
 #### Phantom Navigation menu
 enable_nav: true
 nav_item:
-  - { url: '/', text: 'Home' }
-  - { url: '/about', text: 'About' }
+  - { url: '/', text: 'About' }
+  - { url: '/#skills', text: 'Skills' }
   - { url: '/#portfolio', text: 'Portfolio' }
+  - { url: '#contact', text: 'Contact' }

@@ -26,6 +26,19 @@ $secondary: #FF7B7B;
 	1.0 Defaults
 --------------------------------------------------------------*/
 
+.regular-list {
+  list-style-type: none;
+  padding-left: 4;
+   /* Unnumbered list */
+  
+}
+
+.regular-list li {
+  font-size: 16px; /* Adjust the font size as needed */
+  margin-bottom: 5px; /* Adjust the margin between items as needed */
+}
+
+
 @media (min-width: 1200px) {
   .container {
     width: 1200px;
