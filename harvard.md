@@ -1,9 +1,9 @@
 ---
 layout: inner
-title: ATPen
-permalink: /atpen/
+title: About
+permalink: /harvard/
 ---
-## Markdown
+## A proprioceptive method for estimating the position of a robotic arm
 
 Text can be **bold**, _italic_, ~~strikethrough~~ or `keyword`.
 

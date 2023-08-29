@@ -107,4 +107,4 @@ enable_nav: true
 nav_item:
   - { url: '/', text: 'Home' }
   - { url: '/about', text: 'About' }
-  - { url: '/atpen', text: 'ATPen' }
+  - { url: '/#portfolio', text: 'Portfolio' }
