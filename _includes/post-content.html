@@ -4,10 +4,26 @@
 
     <p class="excerpt">{{ post.lead_text }}</p>
 
-    {% if post.project_link != empty %}
-    <a href="{{ post.project_link }}" class="project-link"><button class="btn btn-default btn-lg"><i
-          class="fa fa-{{post.button_icon}} fa-lg"></i>{{post.button_text}}</button></a>
+    {% if post.github_link != '' endif %}
+    <a href="{{ post.github_link }}" class="project-link"><button class="btn btn-default btn-lg"><i
+          class="fa fa-github fa-lg"></i>GitHub</button></a>
     {% endif %}
+
+    {% if post.project_page != '' endif %}
+    <a href="{{ post.project_page }}" class="project-link"><button class="btn btn-default btn-lg"><i
+          class="fa fa-book fa-lg"></i>Description</button></a>
+    {% endif %}
+
+    {% if post.website_link != '' endif %}
+    <a href="{{ post.website_link }}" class="project-link"><button class="btn btn-default btn-lg"><i
+          class="fa fa-globe fa-lg"></i>{{post.website_name}}</button></a>
+    {% endif %}
+
+    {% if post.download_link != '' endif %}
+    <a href="{{ post.download_link }}" class="project-link"><button class="btn btn-default btn-lg"><i
+          class="fa fa-download fa-lg"></i>Download</button></a>
+    {% endif %}
+
 
     {% if post.tags != empty %}
     <div class="tags">
