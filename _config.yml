@@ -13,14 +13,22 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: "Hello. I'm Jami Gibbs."
-email: 'jami0821@gmail.com'
-description: "I'm a software developer and designer from Chicago creating useful things for the web."
+title: "Hello. I'm Yves Martin."
+email: 'yves@martin.yt'
+description: "I am a Robotics Engineer, currently working as a research engineer in the Herschlag Lab at Stanford
+          University. I have experience in robotics, IoT, and AI."
+
+long_description: "I am originally from Lannion, France and received a B.S. in Microengineering from EPFL in 2019, then a M.S. in
+          Robotics from EPFL in 2022.
+          I did my master's thesis at the Harvard Microrobotics Lab, where I worked on soft robotics sensing.
+          Then I joined the Herschlag Lab at Stanford University as a research engineer, where I developed deep-learning
+          models for biology and multiple data processing softwares."
+
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://jamigibbs.github.io/phantom" # the base hostname & protocol for your site, e.g. https://example.com
-twitter_username: 'jamigibbs'
-github_username: 'jamigibbs'
-medium_username: 'blog.jamigibbs.com'
+github_username: 'yvesmartindestaillades'
+resume: 'assets/pdf/resume.pdf'
+linkedin: "https://www.linkedin.com/in/yves-martin-b2a093131/"
 
 # Build settings
 markdown: kramdown
@@ -99,3 +107,4 @@ enable_nav: true
 nav_item:
   - { url: '/', text: 'Home' }
   - { url: '/about', text: 'About' }
+  - { url: '/atpen', text: 'ATPen' }
