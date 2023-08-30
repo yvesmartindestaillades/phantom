@@ -4,31 +4,27 @@
 
 <div class="break" style="margin-top: 5rem;"></div>
 
-<a class="section-jump text-center"  id="#skills"></a>
+<a class="section-jump text-center" id="#skills"></a>
 
 
-</div>
 {% include skills.html %}
 
 <div class="break" style="margin-top: 5rem;"></div>
 
 <a class="section-jump text-center"></a>
-</a>
 
-
-</div>
 <div class="container">
   <div class="row">
     <h1 class="text-center">Portfolio</h1>
     <div class="col-md-12">
 
-      <!-- {% if site.section_title != '' %}
-            <h2 class="section-title text-center">{{ site.section_title }}</h2>
-            {% endif %}
-            {% if site.section_subtitle != '' %}
-            <p class="section-subtitle text-center">{{ site.section_subtitle }}</p>
-            {% endif %} -->
-
+      {% if site.section_title != '' %}
+      <h2 class="section-title text-center">{{ site.section_title }}</h2>
+      {% endif %}
+      {% if site.section_subtitle != '' %}
+      <p class="section-subtitle text-center">{{ site.section_subtitle }}</p>
+      {% endif %}
+      
       <div class="break"></div>
 
       {% for post in paginator.posts %}
