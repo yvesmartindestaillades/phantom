@@ -3,15 +3,15 @@
   <div class="col-md-12">
 
     <p class="excerpt">{{ post.lead_text }}</p>
+  
+    {% if post.project_link != '' endif %}
+    <a href="{{ post.project_link }}" class="project-link"><button class="btn btn-default btn-lg"><i
+          class="fa fa-book fa-lg"></i>Description</button></a>
+    {% endif %}
 
     {% if post.github_link != '' endif %}
     <a href="{{ post.github_link }}" class="project-link"><button class="btn btn-default btn-lg"><i
           class="fa fa-github fa-lg"></i>GitHub</button></a>
-    {% endif %}
-
-    {% if post.project_page != '' endif %}
-    <a href="{{ post.project_page }}" class="project-link"><button class="btn btn-default btn-lg"><i
-          class="fa fa-book fa-lg"></i>Description</button></a>
     {% endif %}
 
     {% if post.website_link != '' endif %}
