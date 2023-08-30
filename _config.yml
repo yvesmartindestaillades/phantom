@@ -108,4 +108,4 @@ nav_item:
   - { url: '/', text: 'About' }
   - { url: '/#skills', text: 'Skills' }
   - { url: '/#portfolio', text: 'Portfolio' }
-  - { url: '#contact', text: 'Contact' }
+  - { url: '/contact', text: 'Contact' }

@@ -25,9 +25,10 @@
 
       </div>
 
-      <div class="row">
+      <!-- align to the center horizontally -->
+      <div class="row" style="justify-content: center; align-items: center;">
 
-        <div class="col-md-12" style="max-width:50%; float:left; margin-left: 2%;">
+        <div class="col-md-12" style="max-width:50%; float:left; margin-left: 2%; justify-content: center; align-items: center;">
           <h1 class="text-center">{{site.title}}</h1>
           {% if site.description != '' or site.enable_contact == true %}
           <p class="text-center">
@@ -44,7 +45,7 @@
         </div>
 
         {% if site.face != '' %}
-        <figure class="figure text-center" style="max-width:40%; float:right; margin-left: 2%;">
+        <figure class="figure text-center" style="float:right; margin-right: 2%; width: 40%; max-width: 300px;">
           <img src="assets/img/yves_martin.png" alt="face">
         </figure>
         {% endif %}
