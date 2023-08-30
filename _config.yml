@@ -32,7 +32,7 @@ linkedin: "https://www.linkedin.com/in/yves-martin-b2a093131/"
 
 # Build settings
 markdown: kramdown
-remote_theme: phantom # Uncomment once published to RubyGems
+#remote_theme: phantom # Uncomment once published to RubyGems
 plugins:
   - jekyll-paginate-v2
 
